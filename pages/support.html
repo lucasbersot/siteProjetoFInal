@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Rafael Bersot Linares">
+    <link rel="stylesheet" href="../styles/layoutSupport.css">
+    <link rel="icon" href="../image/main/favSite.png">
+    <title>Suporte</title>
+</head>
+<body>
+    <header class="inicio">
+        <img src="../image/main/logoSite.png" alt="Imagem da logo da empresa de noticias sobre programação Syntax News, Com um globo conectado a varios fios de redes com o nome da empresa escrita">
+        <h1>Syntax News</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li class="dropbtn">
+                    <a href="#">IDE'S </a>
+                    <div class="dropdown">  
+                        <a href="../pages/unity.html">Unity</a>
+                        <a href="../pages/unreal.html">Unreal</a>
+                        <a href="../pages/godot.html">Godot</a>
+                        <a href="../pages/gameMaker.html">Game Maker</a>
+                    </div>
+                </li>   
+                <li><a href="../pages/support.html">Suporte</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <header class="titulo">
+            <h1>CONTATE-NOS E CONTE SUA EXPERIENCIA OU RELATE UM BUG!!!</h1>
+        </header>
+        <section class="forms">
+            <form id="relatoForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="tipo">Tipo de Relato:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="bug">Bug</option>
+                    <option value="experiencia">Experiência</option>
+                </select>
+
+                <label for="descricao" id="descricaoLabel">Descreva o bug:</label>
+                <textarea id="descricao" name="descricao" placeholder="Descreva o bug com detalhes..." required></textarea>
+
+                <div class="buttons">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+
+            <form id="confirmForm" style="display: none;">
+                <h2>Confirmar envio do relato</h2>
+
+                <p><strong>Nome:</strong> <span id="confNome"></span></p>
+                <p><strong>Email:</strong> <span id="confEmail"></span></p>
+                <p><strong>Título:</strong> <span id="confTitulo"></span></p>
+                <p><strong>Tipo de Relato:</strong> <span id="confTipo"></span></p>
+                <p><strong>Descrição:</strong> <span id="confDescricao"></span></p>
+
+                <div class="buttons">
+                    <button type="button" id="confirmBtn">Confirmo</button>
+                    <button type="button" id="cancelBtn">Não confirmo</button>
+                </div>
+                <p id="mensagemFinal" style="margin-top: 10px; display: none; color: green;"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <address>
+            <p>
+                Feito por Lucas Rafael <br>
+                E-mail: <a href="mailto:bersot.lucas@aluno.ifsp.edu.br">bersot.lucas@aluno.ifsp.edu.br</a> <br>
+            </p>
+        </address>
+    </footer>
+    <script src="../scripts/scriptForm.js"></script>
+</body>
+</html>
